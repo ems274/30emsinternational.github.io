@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="sPzasrT1dssmZdRc2JyCH00pWM95NV0sDpuRWFYu1YI" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>30 EMS International</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #1e3d59;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #1e3d59;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: 20px 0;
+    }
+    .slides {
+      display: none;
+      width: 100%;
+      border: 2px solid #ccc;
+    }
+    .active {
+      display: block;
+    }
+    .fade {
+      animation: fade 1s ease-in-out;
+    }
+    @keyframes fade {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    footer {
+      background-color: #1e3d59;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="30 EMS International Logo">
+    <h1>30 EMS International</h1>
+    <p>Excellence in Construction Services</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to 30 EMS International</h2>
+    <p>We deliver top-notch construction solutions across various sectors with a focus on quality, safety, and efficiency.</p>
+    <div class="slideshow-container">
+      <img class="slides fade active" src="so2.png" alt="Residential Building Render">
+      <img class="slides fade" src="TA-4.jpg" alt="Construction Team Graphic">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>30 EMS International is a leading construction company committed to building infrastructure that stands the test of time. With years of experience and a skilled team, we undertake projects of all sizes with professionalism and precision.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Commercial and Residential Construction</li>
+      <li>Project Management</li>
+      <li>Renovations and Remodeling</li>
+      <li>Road and Infrastructure Development</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: letsgabriel05@gmail.com</p>
+    <p>Phone: +267 77597954/76104161</p>
+    <p>Address: Block 9, Plot 734, Gaborone, Botswana</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 30 EMS International. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      const slides = document.getElementsByClassName("slides");
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      slides[slideIndex - 1].classList.add("active");
+    }
+
+    // Optional auto-rotate
+    setInterval(() => { plusSlides(1); }, 5000);
+  </script>
+</body>
+</html>
